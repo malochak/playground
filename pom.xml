@@ -10,6 +10,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>design_patterns</module>
+    <module>others</module>
   </modules>
 
   <properties>
