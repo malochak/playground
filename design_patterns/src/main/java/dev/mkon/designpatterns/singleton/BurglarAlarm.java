@@ -16,13 +16,16 @@ public class BurglarAlarm {
 
   private int tries = 0;
 
-  private int pin;
+  private final int pin;
 
   private boolean isArmed;
 
   private boolean isTriggered;
 
   private BurglarAlarm(int pin) {
+    if (instance != null) {
+      throw new AssertionError("Use getInstance() method to get the single instance of this class.");
+    }
     this.pin = pin;
   }
 
