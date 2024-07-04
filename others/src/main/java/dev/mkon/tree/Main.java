@@ -2,6 +2,7 @@ package dev.mkon.tree;
 
 import java.util.List;
 
+import dev.mkon.tree.model.Node;
 import dev.mkon.utils.FileLoader;
 
 public class Main {
@@ -17,7 +18,7 @@ public class Main {
     private void run() {
         List<String> csvLines = fileLoader.loadLinesFromFile(INPUT_PATH);
 
-        System.out.println(csvLines);
+        System.out.println(csvLines.stream().map(Node::fromCsvLine).toList());
     }
 
 
